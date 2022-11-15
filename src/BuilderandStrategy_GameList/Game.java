@@ -1,6 +1,9 @@
 package BuilderandStrategy_GameList;
 
 import FactoryMethod_Member.User;
+import Observer_Notify.ChungnamNotify;
+import Observer_Notify.HanbatNotify;
+import Observer_Notify.HannamNotify;
 import Observer_Notify.Subject;
 
 import java.util.ArrayList;
@@ -110,8 +113,14 @@ public class Game {
             return this;
         }
 
-        public Game build(Subject subject) {
-            subject.notifyObservers(gameName, gameDate, place, eventUniv);
+        public Game build() {
+
+            if (eventUniv.equals("충남대"))
+                ChungnamNotify.getInstance().notifyObservers(gameName, gameDate, place, eventUniv);
+            else if (eventUniv.equals("한밭대") )
+                HanbatNotify.getInstance().notifyObservers(gameName, gameDate, place, eventUniv);
+            else
+                HannamNotify.getInstance().notifyObservers(gameName, gameDate, place, eventUniv);
             return new Game(this);
         }
 

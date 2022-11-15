@@ -30,14 +30,18 @@ public class Main {
         User hannamUser2 = hannam.newInstance("Hannam2",4);
 
 ////////////////////////////////////
+        //회원 등급 확인
+        //각 학교 1번은 회장, 한밭대 2번은 부회장, 한남대2번은 총무라고 가정합니다.
+
+        ///////////
         
         /////////Observer Pattern
 
-        ChungnamNotify chungnamNotify = new ChungnamNotify();
+        ChungnamNotify chungnamNotify = ChungnamNotify.getInstance();
 
-        HanbatNotify hanbatNotify = new HanbatNotify();
+        HanbatNotify hanbatNotify = HanbatNotify.getInstance();
 
-        HannamNotify hannamNotify = new HannamNotify();
+        HannamNotify hannamNotify = HannamNotify.getInstance();
 
         //한밭대생 Noti등록
         hanbatNotify.add(hanbatUser1);
@@ -75,7 +79,7 @@ public class Main {
                 .clubName("굿샷")
                 .courtType("Clay")
                 .eventUniv("충남대")
-                .build(chungnamNotify);
+                .build();
 
         System.out.println();
         System.out.println();
@@ -86,7 +90,7 @@ public class Main {
                 .gameDate(cal)
                 .place("한밭대학교 코트장")
                 .eventUniv("한밭대")
-                .build(hanbatNotify);
+                .build();
 
 //        System.out.println(game1.toString());
 //        System.out.println(game2.toString());
