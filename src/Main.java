@@ -9,17 +9,14 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
 
-        UserFactory hanbat = new HanbatUserFactory();
-        UserFactory chungnam = new ChungnamUserFactory();
-        UserFactory hannam = new HanbatUserFactory();
+//        UserFactory hanbat = new HanbatUserFactory();
+//        UserFactory chungnam = new ChungnamUserFactory();
+        UserFactory hannam = new HannamUserFactory();
 ///////////////////////////// TODO: 회원가입 커스텀 필요
 //        User newHanbat = hanbat.newInstance();
 //        User newChungnam = chungnam.newInstance();
-//        User newHannam = hannam.newInstance();
+        User newHannam = hannam.newInstance("Hannam1");
 
-//        newHanbat.signup();
-//        newChungnam.signup();
-//        newHannam.signup();
 ////////////////////////////////////
 
 
@@ -45,6 +42,8 @@ public class Main {
 
 
         //////////////////
+
+
 
 
     }

@@ -3,9 +3,10 @@ package FactoryMethod_Member.UserFactory;
 import FactoryMethod_Member.User;
 
 public abstract class UserFactory {
-    public User newInstance() {
+
+    public User newInstance(String name) {
         User user = createUser();
-        user.signup();
+        user.signup(name);
         return user;
     }
 

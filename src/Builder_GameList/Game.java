@@ -1,5 +1,7 @@
 package Builder_GameList;
 
+import FactoryMethod_Member.User;
+
 import java.util.Date;
 
 public class Game {
@@ -28,11 +30,15 @@ public class Game {
     }
 
 
-
     @Override
     public String toString() {
         return "gameName: " + gameName + " gameDate: " + gameDate + " place: " + place + " description: " + description + " clubName: " + clubName + " courtType: " + courtType;
     }
+
+    public void Enrollment(User user) {
+        user.getClass();
+    }
+
 
     public static class GameBuilder {
 

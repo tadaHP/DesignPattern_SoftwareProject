@@ -1,5 +1,6 @@
 package FactoryMethod_Member;
 
 public interface User {
-    void signup();
+
+    void signup(String name);
 }
