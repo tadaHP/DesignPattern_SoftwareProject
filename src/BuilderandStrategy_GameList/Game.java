@@ -1,8 +1,10 @@
 package BuilderandStrategy_GameList;
 
 import FactoryMethod_Member.User;
+import Observer_Notify.Subject;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -10,7 +12,7 @@ public class Game {
 
     //필수 파라미터
     private String gameName;
-    private Date gameDate;
+    private Calendar gameDate;
     private String place;
     private String eventUniv;//이벤트 생성한 학교
 
@@ -25,7 +27,7 @@ public class Game {
         this.place = builder.place;
         this.description = builder.description;
         this.clubName = builder.clubName;
-        this.courtType = builder.clubName;
+        this.courtType = builder.courtType;
         this.eventUniv = builder.eventUniv;
     }
 
@@ -36,7 +38,9 @@ public class Game {
 
     @Override
     public String toString() {
-        return "gameName: " + gameName + " gameDate: " + gameDate + " place: " + place + " description: " + description + " clubName: " + clubName + " courtType: " + courtType;
+        return "gameName: " + gameName + " gameDate: " + gameDate.get(Calendar.YEAR) + "." + (gameDate.get(Calendar.MONTH) + 1)
+                + "." + gameDate.get(Calendar.DATE) + " place: " + place + " description: " + description + " clubName: " + clubName
+                + " courtType: " + courtType;
     }
 
     //게임참여
@@ -59,13 +63,14 @@ public class Game {
     public static class GameBuilder {
 
         private String gameName;
-        private Date gameDate;
+        private Calendar gameDate;
         private String place;
-
-        private String description;
-        private String clubName;
-        private String courtType;
         private String eventUniv;
+
+        private String clubName;
+        private String description;
+        private String courtType;
+
 
 
         private GameBuilder(){}
@@ -75,7 +80,7 @@ public class Game {
             return this;
         }
 
-        public GameBuilder gameDate(Date gameDate) {
+        public GameBuilder gameDate(Calendar gameDate) {
             this.gameDate = gameDate;
             return this;
         }
@@ -105,7 +110,8 @@ public class Game {
             return this;
         }
 
-        public Game build() {
+        public Game build(Subject subject) {
+            subject.notifyObservers(gameName, gameDate, place, eventUniv);
             return new Game(this);
         }
 

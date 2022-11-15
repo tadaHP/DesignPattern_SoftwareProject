@@ -8,6 +8,7 @@ import Observer_Notify.ChungnamNotify;
 import Observer_Notify.HanbatNotify;
 import Observer_Notify.HannamNotify;
 
+import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
@@ -29,8 +30,7 @@ public class Main {
         User hannamUser2 = hannam.newInstance("Hannam2",4);
 
 ////////////////////////////////////
-        System.out.println();
-        System.out.println();
+        
         /////////Observer Pattern
 
         ChungnamNotify chungnamNotify = new ChungnamNotify();
@@ -59,31 +59,37 @@ public class Main {
 
         ////////////////////////
 
-        ///Temp Noti
-        hanbatNotify.notifyObservers("임시경기",new Date(),"한밭대", "한밭대학교");
-        //////////// TODO: Builder에서 노티 완료하면 삭제
 
         System.out.println();
         System.out.println();
-        //////////////////Builder TODO:Build후 알아서 Noti하게
+        //////////////////Builder
+
+        Calendar cal = Calendar.getInstance();
+        cal.set(2022, 7, 20);
 
         Game game1 = Game.builder()
-                .gameName("Test")
-                .gameDate(new Date())
-                .place("코트장")
-                .description("TestDesc")
-                .clubName("Null")
-                .courtType("Grass")
-                .build();
+                .gameName("충남대 오픈")
+                .gameDate(cal)
+                .place("충남대 코트장")
+                .description("충남대 오픈입니다.")
+                .clubName("굿샷")
+                .courtType("Clay")
+                .eventUniv("충남대")
+                .build(chungnamNotify);
 
+        System.out.println();
+        System.out.println();
+
+        cal.set(2022,11,8);
         Game game2 = Game.builder()
-                .gameName("Test")
-                .gameDate(new Date())
-                .place("코트장")
-                        .build();
+                .gameName("마스터즈 오픈")
+                .gameDate(cal)
+                .place("한밭대학교 코트장")
+                .eventUniv("한밭대")
+                .build(hanbatNotify);
 
-        System.out.println(game1.toString());
-        System.out.println(game2.toString());
+//        System.out.println(game1.toString());
+//        System.out.println(game2.toString());
 
 
 
@@ -99,7 +105,7 @@ public class Main {
         game1.attend(hannamUser2);
         game1.attend(chungnamUser1);
         game1.attend(chungnamUser2);
-        
+
 
         //두가지 전략 생성
         RunGame KDK = new KDK_Run();
@@ -110,7 +116,6 @@ public class Main {
 
         System.out.println("한울 전략으로 출력");
         Hanul.Run(game1.getGameParticipant());
-
 
         ////////////////////
 
