@@ -1,7 +1,4 @@
-import BuilderandStrategy_GameList.Game;
-import BuilderandStrategy_GameList.Hanul_Run;
-import BuilderandStrategy_GameList.KDK_Run;
-import BuilderandStrategy_GameList.RunGame;
+import BuilderandStrategy_GameList.*;
 import FactoryMethod_Member.*;
 import FactoryMethod_Member.UserFactory.*;
 import Observer_Notify.ChungnamNotify;
@@ -16,7 +13,7 @@ public class Main {
         UserFactory hanbat = new HanbatUserFactory();
         UserFactory chungnam = new ChungnamUserFactory();
         UserFactory hannam = new HannamUserFactory();
-/////////////////////////////
+
         User hanbatUser1 = hanbat.newInstance("hanbat1",1);
         User hanbatUser2 = hanbat.newInstance("hanbat2",6);
 
@@ -27,11 +24,6 @@ public class Main {
         User hannamUser1 = hannam.newInstance("Hannam1",2);
         User hannamUser2 = hannam.newInstance("Hannam2",4);
 
-////////////////////////////////////
-        //회원 등급 확인
-        //각 학교 1번은 회장, 한밭대 2번은 부회장, 한남대2번은 총무라고 가정합니다.
-
-        ///////////
         
         /////////Observer Pattern
 

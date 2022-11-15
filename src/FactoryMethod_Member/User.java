@@ -8,9 +8,6 @@ import java.util.Date;
 public abstract class User extends Observer {
     String name;
     int Level;//범위는 1~10
-
-
-
     public void signup(String name, int level) {
         this.name = name;
         this.Level = level;

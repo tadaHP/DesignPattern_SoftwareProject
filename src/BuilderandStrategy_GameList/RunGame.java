@@ -7,6 +7,4 @@ import java.util.List;
 public interface RunGame {
     void Run(List<User> gameParticipant);
 
-
-
 }

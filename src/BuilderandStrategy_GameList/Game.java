@@ -17,25 +17,26 @@ public class Game {
     private String gameName;
     private Calendar gameDate;
     private String place;
-    private String eventUniv;//이벤트 생성한 학교
+    private String eventUniv;
 
     //선택 파라미터
     private String description;
     private String clubName;
     private String courtType;
 
-    private Game(GameBuilder builder) {
-        this.gameName = builder.gameName;
-        this.gameDate = builder.gameDate;
-        this.place = builder.place;
-        this.description = builder.description;
-        this.clubName = builder.clubName;
-        this.courtType = builder.courtType;
-        this.eventUniv = builder.eventUniv;
+    Game(ConcreteGameBuilder concreteGameBuilder) {
+        this.gameName = concreteGameBuilder.getGameName();
+        this.gameDate = concreteGameBuilder.getGameDate();
+        this.place = concreteGameBuilder.getPlace();
+        this.description = concreteGameBuilder.getDescription();
+        this.clubName = concreteGameBuilder.getClubName();
+        this.courtType = concreteGameBuilder.getCourtType();
+        this.eventUniv = concreteGameBuilder.getEventUniv();
     }
 
-    public static GameBuilder builder() {
-        return new GameBuilder();
+
+    public static ConcreteGameBuilder builder() {
+        return new ConcreteGameBuilder();
     }
 
 
@@ -63,68 +64,7 @@ public class Game {
     }
 
 
-    public static class GameBuilder {
 
-        private String gameName;
-        private Calendar gameDate;
-        private String place;
-        private String eventUniv;
-
-        private String clubName;
-        private String description;
-        private String courtType;
-
-
-
-        private GameBuilder(){}
-
-        public GameBuilder gameName(String gameName) {
-            this.gameName = gameName;
-            return this;
-        }
-
-        public GameBuilder gameDate(Calendar gameDate) {
-            this.gameDate = gameDate;
-            return this;
-        }
-
-        public GameBuilder place(String place) {
-            this.place = place;
-            return this;
-        }
-
-        public GameBuilder description(String description) {
-            this.description = description;
-            return this;
-        }
-
-        public GameBuilder clubName(String clubName) {
-            this.clubName = clubName;
-            return this;
-        }
-
-        public GameBuilder courtType(String courtType) {
-            this.courtType = courtType;
-            return this;
-        }
-
-        public GameBuilder eventUniv(String eventUniv) {
-            this.eventUniv = eventUniv;
-            return this;
-        }
-
-        public Game build() {
-
-            if (eventUniv.equals("충남대"))
-                ChungnamNotify.getInstance().notifyObservers(gameName, gameDate, place, eventUniv);
-            else if (eventUniv.equals("한밭대") )
-                HanbatNotify.getInstance().notifyObservers(gameName, gameDate, place, eventUniv);
-            else
-                HannamNotify.getInstance().notifyObservers(gameName, gameDate, place, eventUniv);
-            return new Game(this);
-        }
-
-    }
 
 
 }

@@ -18,7 +18,7 @@ public abstract class Subject {
 
     public void notifyObservers(String title, Calendar date, String place, String univName) {
         for (Observer o : observers) {
-            o.receive(title,date,place, univName);
+            o.receive(title, date, place, univName);
         }
     }
 }
