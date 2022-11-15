@@ -18,7 +18,8 @@ Desgin Pattern
 
 
 ### 2.경기 생성  
- Builder 패턴: 빌더로 경기 정보를 받아와 생성  
+ Builder 패턴: 빌더로 경기 정보를 받아와 생성, 생성시 필요없는 정보는 생략    
+ https://wildeveloperetrain.tistory.com/30 참고
 
 
 ### 3.경기 매칭  
