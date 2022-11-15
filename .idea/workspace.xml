@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34eeef2c-936f-4697-9ccd-cedb02da88c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Observer_Notify/ChungnamNotify.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Observer_Notify/HanbatNotify.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Observer_Notify/HannamNotify.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Observer_Notify/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Observer_Notify/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuilderandStrategy_GameList/Hanul_Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuilderandStrategy_GameList/KDK_Run.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BuilderandStrategy_GameList/RunGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Builder_GameList/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Builder_GameList/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Builder_GameList/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BuilderandStrategy_GameList/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FactoryMethod_Member/ChungnamUnivUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryMethod_Member/ChungnamUnivUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FactoryMethod_Member/HanbatUnivUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryMethod_Member/HanbatUnivUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FactoryMethod_Member/HannamUnivUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryMethod_Member/HannamUnivUser.java" afterDir="false" />
@@ -80,7 +78,7 @@
       <workItem from="1668495776981" duration="4289000" />
       <workItem from="1668500227527" duration="122000" />
       <workItem from="1668500535732" duration="4588000" />
-      <workItem from="1668512744274" duration="1494000" />
+      <workItem from="1668512744274" duration="3340000" />
     </task>
     <task id="LOCAL-00001" summary="AfterMaking Signup with FactoryMethodPattern">
       <created>1668497858750</created>
@@ -103,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668506327944</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Rewrite Observer(error of position)&#10;TODO: Have to noti After Build Pattern">
+      <created>1668514591009</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668514591009</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,7 +117,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AfterMaking Signup with FactoryMethodPattern" />
     <MESSAGE value="Add name in User" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add name in User" />
+    <MESSAGE value="Rewrite Observer(error of position)&#10;TODO: Have to noti After Build Pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rewrite Observer(error of position)&#10;TODO: Have to noti After Build Pattern" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

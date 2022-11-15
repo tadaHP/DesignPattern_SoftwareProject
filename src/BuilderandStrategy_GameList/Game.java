@@ -1,8 +1,10 @@
-package Builder_GameList;
+package BuilderandStrategy_GameList;
 
 import FactoryMethod_Member.User;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Game {
 
@@ -37,6 +39,21 @@ public class Game {
         return "gameName: " + gameName + " gameDate: " + gameDate + " place: " + place + " description: " + description + " clubName: " + clubName + " courtType: " + courtType;
     }
 
+    //게임참여
+    private List<User> gameParticipant = new ArrayList<>();
+    /////////
+
+    public void attend(User user) {
+        gameParticipant.add(user);
+    }
+
+    public void deAttend(User user) {
+        gameParticipant.add(user);
+    }
+
+    public List<User> getGameParticipant() {
+        return gameParticipant;
+    }
 
 
     public static class GameBuilder {

@@ -1,11 +1,13 @@
-import Builder_GameList.Game;
+import BuilderandStrategy_GameList.Game;
+import BuilderandStrategy_GameList.Hanul_Run;
+import BuilderandStrategy_GameList.KDK_Run;
+import BuilderandStrategy_GameList.RunGame;
 import FactoryMethod_Member.*;
 import FactoryMethod_Member.UserFactory.*;
 import Observer_Notify.ChungnamNotify;
 import Observer_Notify.HanbatNotify;
 import Observer_Notify.HannamNotify;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 public class Main {
@@ -16,15 +18,15 @@ public class Main {
         UserFactory chungnam = new ChungnamUserFactory();
         UserFactory hannam = new HannamUserFactory();
 /////////////////////////////
-        User hanbatUser1 = hanbat.newInstance("hanbat1");
-        User hanbatUser2 = hanbat.newInstance("hanbat2");
+        User hanbatUser1 = hanbat.newInstance("hanbat1",1);
+        User hanbatUser2 = hanbat.newInstance("hanbat2",6);
 
 
-        User chungnamUser1 = chungnam.newInstance("chungnam1");
-        User chungnamUser2 = chungnam.newInstance("chungnam2");
+        User chungnamUser1 = chungnam.newInstance("chungnam1",1);
+        User chungnamUser2 = chungnam.newInstance("chungnam2",8);
 
-        User hannamUser1 = hannam.newInstance("Hannam1");
-        User hannamUser2 = hannam.newInstance("Hannam2");
+        User hannamUser1 = hannam.newInstance("Hannam1",2);
+        User hannamUser2 = hannam.newInstance("Hannam2",4);
 
 ////////////////////////////////////
         System.out.println();
@@ -84,8 +86,33 @@ public class Main {
         System.out.println(game2.toString());
 
 
-        //////////////////
 
+        //////////////////
+        System.out.println();
+        System.out.println();
+        ///Strategy Pattern
+
+        //참가자 전원 등록
+        game1.attend(hanbatUser1);
+        game1.attend(hanbatUser2);
+        game1.attend(hannamUser1);
+        game1.attend(hannamUser2);
+        game1.attend(chungnamUser1);
+        game1.attend(chungnamUser2);
+        
+
+        //두가지 전략 생성
+        RunGame KDK = new KDK_Run();
+        RunGame Hanul = new Hanul_Run();
+
+        System.out.println("KDK전략으로 출력");
+        KDK.Run(game1.getGameParticipant());
+
+        System.out.println("한울 전략으로 출력");
+        Hanul.Run(game1.getGameParticipant());
+
+
+        ////////////////////
 
 
 

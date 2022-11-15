@@ -4,9 +4,9 @@ import FactoryMethod_Member.User;
 
 public abstract class UserFactory{
 
-    public User newInstance(String name) {
+    public User newInstance(String name, int level) {
         User user = createUser();
-        user.signup(name);
+        user.signup(name, level);
         return user;
     }
 
