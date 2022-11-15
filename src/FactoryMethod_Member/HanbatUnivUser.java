@@ -1,13 +1,12 @@
 package FactoryMethod_Member;
 
-public class HanbatUnivUser implements User{
+public class HanbatUnivUser extends User {
 
-    String name;
 
     @Override
     public void signup(String name) {
         System.out.println("한밭대생"+name +" 로그인");
-        this.name = name;
+        super.name = name;
     }
 }
 

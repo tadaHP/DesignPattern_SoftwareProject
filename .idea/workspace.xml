@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34eeef2c-936f-4697-9ccd-cedb02da88c7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Observer_Notify/ChungnamNotify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Observer_Notify/HanbatNotify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Observer_Notify/HannamNotify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Observer_Notify/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Observer_Notify/Subject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Builder_GameList/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Builder_GameList/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FactoryMethod_Member/ChungnamUnivUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryMethod_Member/ChungnamUnivUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FactoryMethod_Member/HanbatUnivUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryMethod_Member/HanbatUnivUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FactoryMethod_Member/HannamUnivUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryMethod_Member/HannamUnivUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FactoryMethod_Member/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryMethod_Member/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FactoryMethod_Member/UserFactory/HannamUnivFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryMethod_Member/UserFactory/HannamUserFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FactoryMethod_Member/UserFactory/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryMethod_Member/UserFactory/UserFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -75,7 +79,8 @@
       <workItem from="1668495674148" duration="54000" />
       <workItem from="1668495776981" duration="4289000" />
       <workItem from="1668500227527" duration="122000" />
-      <workItem from="1668500535732" duration="2542000" />
+      <workItem from="1668500535732" duration="4588000" />
+      <workItem from="1668512744274" duration="1494000" />
     </task>
     <task id="LOCAL-00001" summary="AfterMaking Signup with FactoryMethodPattern">
       <created>1668497858750</created>
@@ -91,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668503060694</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add name in User">
+      <created>1668506327944</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668506327944</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,7 +111,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AfterMaking Signup with FactoryMethodPattern" />
-    <option name="LAST_COMMIT_MESSAGE" value="AfterMaking Signup with FactoryMethodPattern" />
+    <MESSAGE value="Add name in User" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add name in User" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -10,6 +10,7 @@ public class Game {
     private String gameName;
     private Date gameDate;
     private String place;
+    private String eventUniv;//이벤트 생성한 학교
 
     //선택 파라미터
     private String description;
@@ -23,6 +24,7 @@ public class Game {
         this.description = builder.description;
         this.clubName = builder.clubName;
         this.courtType = builder.clubName;
+        this.eventUniv = builder.eventUniv;
     }
 
     public static GameBuilder builder() {
@@ -35,9 +37,6 @@ public class Game {
         return "gameName: " + gameName + " gameDate: " + gameDate + " place: " + place + " description: " + description + " clubName: " + clubName + " courtType: " + courtType;
     }
 
-    public void Enrollment(User user) {
-        user.getClass();
-    }
 
 
     public static class GameBuilder {
@@ -49,6 +48,8 @@ public class Game {
         private String description;
         private String clubName;
         private String courtType;
+        private String eventUniv;
+
 
         private GameBuilder(){}
 
@@ -79,6 +80,11 @@ public class Game {
 
         public GameBuilder courtType(String courtType) {
             this.courtType = courtType;
+            return this;
+        }
+
+        public GameBuilder eventUniv(String eventUniv) {
+            this.eventUniv = eventUniv;
             return this;
         }
 
